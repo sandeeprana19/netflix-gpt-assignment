@@ -11,3 +11,5 @@
 - Firebase setup
 - Deploying our app to production
 - Creating redux store with user slice
+- Implemented sign out
+- Update profile

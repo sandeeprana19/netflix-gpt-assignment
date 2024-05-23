@@ -8,6 +8,8 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -16,6 +18,7 @@ const Login = () => {
   const email = useRef();
   const password = useRef();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -38,7 +41,29 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          navigate("/browse");
+
+          updateProfile(user, {
+            displayName: fullNameValue,
+            photoURL: "https://avatars.githubusercontent.com/u/62502757?v=4",
+          })
+            .then(() => {
+              console.log(auth);
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+
+              navigate("/browse");
+            })
+            .catch((error) => {
+              setErrorMessage(error);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -52,17 +77,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-
-          updateProfile(user, {
-            displayName: fullNameValue,
-            photoURL: "https://avatars.githubusercontent.com/u/62502757?v=4",
-          })
-            .then(() => {
-              navigate("/browse");
-            })
-            .catch((error) => {
-              setErrorMessage(error);
-            });
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -138,19 +153,3 @@ const Login = () => {
 };
 
 export default Login;
-
-// - create-react-app
-// - Configure tailwindcss
-// - Header
-// - Routing of App
-// - Login form
-// - Sign up form
-// - Form validation
-// - useRef Hook
-// - Firebase setup
-// - Deploying our app to production
-// - Create sign up user account
-// - Implement sign in user api
-// - Created redux store with userSlice
-// - Implemented sign out
-// - Update profile

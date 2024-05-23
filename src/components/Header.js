@@ -1,7 +1,21 @@
+import { signOut } from "firebase/auth";
 import { useSelector } from "react-redux";
+import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const user = useSelector((store) => store.user);
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        navigate("/error");
+      });
+  };
 
   return (
     <header className="absolute top-0 left-0 w-screen z-50 bg-gradient-to-b from-black">
@@ -14,18 +28,24 @@ const Header = () => {
               alt="Netflix Logo"
             />
           </div>
-          <div className="flex items-center gap-x-3">
-            <div className="w-8 flex items-center justify-center overflow-hidden">
-              <img
-                src={user?.photoURL}
-                alt="User default avatar"
-                className="w-full h-auto"
-              />
+
+          {user && (
+            <div className="flex items-center gap-x-3">
+              <div className="w-8 flex items-center justify-center overflow-hidden">
+                <img
+                  src={user?.photoURL}
+                  alt="User default avatar"
+                  className="w-full h-auto"
+                />
+              </div>
+              <button
+                className="cursor-pointer text-lg font-bold text-white"
+                onClick={handleSignOut}
+              >
+                Sign Out
+              </button>
             </div>
-            <span className="cursor-pointer text-lg font-bold text-white">
-              Sign Out
-            </span>
-          </div>
+          )}
         </div>
       </div>
     </header>
