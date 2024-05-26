@@ -33,11 +33,11 @@ const Header = () => {
           })
         );
 
-        navigate("/browse");
+        // navigate("/browse");
       } else {
         dispatch(removeUser());
 
-        navigate("/");
+        // navigate("/");
       }
     });
 
