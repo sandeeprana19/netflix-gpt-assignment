@@ -1,10 +1,10 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
-import { auth } from "../utils/firebase";
+import { auth } from "../../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO } from "../utils/constants";
+import { addUser, removeUser } from "../../utils/userSlice";
+import { LOGO } from "../../utils/constants";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -33,11 +33,11 @@ const Header = () => {
           })
         );
 
-        // navigate("/browse");
+        navigate("/browse");
       } else {
         dispatch(removeUser());
 
-        // navigate("/");
+        navigate("/");
       }
     });
 
