@@ -67,17 +67,19 @@ const Header = () => {
 
           {user && (
             <div className="flex items-center justify-end gap-x-7">
-              <select
-                className="select select-bordered w-full max-w-xs"
-                ref={language}
-                onChange={handleChangeLanguage}
-              >
-                {SUPPORTED_LANGUAGES.map((lang) => (
-                  <option key={lang.identifier} value={lang.identifier}>
-                    {lang.name}
-                  </option>
-                ))}
-              </select>
+              {showGptSearch && (
+                <select
+                  className="select select-bordered w-full max-w-xs"
+                  ref={language}
+                  onChange={handleChangeLanguage}
+                >
+                  {SUPPORTED_LANGUAGES.map((lang) => (
+                    <option key={lang.identifier} value={lang.identifier}>
+                      {lang.name}
+                    </option>
+                  ))}
+                </select>
+              )}
               <button
                 className="btn bg-red-600 text-white hover:bg-red-800"
                 onClick={handleGptSearch}
