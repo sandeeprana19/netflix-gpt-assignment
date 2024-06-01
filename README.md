@@ -33,3 +33,6 @@
 - TMDB img cdn url
 - Made the browse page amazing with tailwindcss
 - usePopularMovies custom hook
+- Get search page
+- Get search bar
+- (Bonus) - Multiple language support for search bar

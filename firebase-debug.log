@@ -1,47 +1,32 @@
-[debug] [2024-05-30T09:49:32.386Z] ----------------------------------------------------------------------
-[debug] [2024-05-30T09:49:32.391Z] Command:       /home/cnadmin/.nvm/versions/node/v20.12.2/bin/node /home/cnadmin/.nvm/versions/node/v20.12.2/bin/firebase login
-[debug] [2024-05-30T09:49:32.392Z] CLI Version:   13.10.0
-[debug] [2024-05-30T09:49:32.393Z] Platform:      linux
-[debug] [2024-05-30T09:49:32.393Z] Node Version:  v20.12.2
-[debug] [2024-05-30T09:49:32.393Z] Time:          Thu May 30 2024 15:19:32 GMT+0530 (India Standard Time)
-[debug] [2024-05-30T09:49:32.394Z] ----------------------------------------------------------------------
+[debug] [2024-05-30T22:27:10.394Z] ----------------------------------------------------------------------
+[debug] [2024-05-30T22:27:10.397Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2024-05-30T22:27:10.398Z] CLI Version:   13.10.1
+[debug] [2024-05-30T22:27:10.398Z] Platform:      win32
+[debug] [2024-05-30T22:27:10.398Z] Node Version:  v20.12.2
+[debug] [2024-05-30T22:27:10.399Z] Time:          Fri May 31 2024 03:57:10 GMT+0530 (India Standard Time)
+[debug] [2024-05-30T22:27:10.399Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-05-30T09:49:32.401Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[info] Already logged in as sandeepranawd@gmail.com
-[debug] [2024-05-30T09:49:33.542Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2024-05-30T09:49:33.543Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[debug] [2024-05-30T09:49:38.047Z] Error: Timed out.
-    at Timeout._onTimeout (/home/cnadmin/.nvm/versions/node/v20.12.2/lib/node_modules/firebase-tools/lib/utils.js:267:49)
-    at listOnTimeout (node:internal/timers:573:17)
-    at process.processTimers (node:internal/timers:514:7)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2024-05-30T09:59:07.556Z] ----------------------------------------------------------------------
-[debug] [2024-05-30T09:59:07.560Z] Command:       /home/cnadmin/.nvm/versions/node/v20.12.2/bin/node /home/cnadmin/.nvm/versions/node/v20.12.2/bin/firebase deploy
-[debug] [2024-05-30T09:59:07.561Z] CLI Version:   13.10.0
-[debug] [2024-05-30T09:59:07.561Z] Platform:      linux
-[debug] [2024-05-30T09:59:07.562Z] Node Version:  v20.12.2
-[debug] [2024-05-30T09:59:07.562Z] Time:          Thu May 30 2024 15:29:07 GMT+0530 (India Standard Time)
-[debug] [2024-05-30T09:59:07.562Z] ----------------------------------------------------------------------
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=736445778&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-05-30T22:28:56.761Z] ----------------------------------------------------------------------
+[debug] [2024-05-30T22:28:56.764Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2024-05-30T22:28:56.765Z] CLI Version:   13.10.1
+[debug] [2024-05-30T22:28:56.765Z] Platform:      win32
+[debug] [2024-05-30T22:28:56.765Z] Node Version:  v20.12.2
+[debug] [2024-05-30T22:28:56.766Z] Time:          Fri May 31 2024 03:58:56 GMT+0530 (India Standard Time)
+[debug] [2024-05-30T22:28:56.766Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-05-30T09:59:07.776Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-05-30T09:59:07.777Z] > authorizing via signed-in user (sandeepranawd@gmail.com)
-[debug] [2024-05-30T09:59:07.778Z] [iam] checking project igniteflickgpt for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-05-30T09:59:07.781Z] > refreshing access token with scopes: []
-[debug] [2024-05-30T09:59:07.785Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-05-30T09:59:07.785Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-05-30T09:59:08.430Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 403
-[debug] [2024-05-30T09:59:08.431Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-05-30T09:59:08.431Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2024-05-30T09:59:08.433Z] > refreshing access token with scopes: []
-[debug] [2024-05-30T09:59:08.433Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-05-30T09:59:08.434Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-05-30T09:59:08.622Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 403
-[debug] [2024-05-30T09:59:08.622Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-05-30T09:59:08.622Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[error] 
-[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=850973187&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...

@@ -9,7 +9,7 @@ import {
 import { auth } from "../../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../utils/slices/userSlice";
-import { USER_AVATAR } from "../../utils/constants";
+import { BG_URL, USER_AVATAR } from "../../utils/constants/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -83,7 +83,10 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/41c789f0-7df5-4219-94c6-c66fe500590a/3149e5eb-4660-4e3d-9e65-b1e615229c64/IN-en-20240513-popsignuptwoweeks-perspective_alpha_website_medium.jpg')] w-screen min-h-screen bg-no-repeat bg-cover bg-center">
+    <div className="w-screen h-screen relative">
+      <div className="w-full h-full flex items-center justify-center overflow-hidden absolute top-0 left-0 z-0">
+        <img src={BG_URL} alt="Background image" />
+      </div>
       <Header />
       <div className="w-[28.125rem] py-12 px-[4.25rem] bg-black bg-opacity-80 rounded absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
         <form onSubmit={(e) => e.preventDefault()}>
