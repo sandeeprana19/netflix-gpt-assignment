@@ -5,20 +5,24 @@ import { useSelector } from "react-redux";
 const GptSearchBar = () => {
   const langKey = useSelector((store) => store.config?.lang);
 
+  const handleGptSearch = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div>
-      <form className="w-6/12 mx-auto">
-        <label className="input input-bordered flex items-center gap-2">
+      <form className="w-6/12 mx-auto" onSubmit={handleGptSearch}>
+        <label className="input input-bordered bg-white flex items-center gap-2">
           <input
             type="text"
-            className="grow"
+            className="grow text-black"
             placeholder={lang[langKey].searchPlaceholder}
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
             fill="currentColor"
-            className="w-4 h-4 opacity-70"
+            className="w-4 h-4 text-red-600"
           >
             <path
               fillRule="evenodd"
