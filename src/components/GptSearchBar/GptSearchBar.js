@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import lang from "../../utils/constants/languageConstants";
 import { useSelector } from "react-redux";
+import openai from "../../utils/openai";
 
 const GptSearchBar = () => {
   const langKey = useSelector((store) => store.config?.lang);
+  const searchText = useRef();
 
-  const handleGptSearch = (e) => {
+  const handleGptSearch = async (e) => {
     e.preventDefault();
+
+    console.log(searchText.current.value);
+
+    const getQuery =
+      "As a movie recommendation system and suggest some movies for the query : " +
+      searchText.current.value +
+      ". Only give me names of 5 movies, comma separated like example given ahead. Example: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya";
+
+    console.log(getQuery);
+
+    const getResults = await openai.chat.completions.create({
+      messages: [{ role: "user", content: getQuery }],
+      model: "gpt-3.5-turbo",
+    });
+
+    if (!getResults) {
+      // TODO: Write error handling
+    }
+
+    const getMovies = getResults.choices?.[0].message?.content.split(",");
   };
 
   return (
@@ -14,6 +36,7 @@ const GptSearchBar = () => {
       <form className="w-6/12 mx-auto" onSubmit={handleGptSearch}>
         <label className="input input-bordered bg-white flex items-center gap-2">
           <input
+            ref={searchText}
             type="text"
             className="grow text-black"
             placeholder={lang[langKey].searchPlaceholder}
