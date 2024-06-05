@@ -19,11 +19,15 @@ const VideoList = ({ title, movies }) => {
           free-mode="true"
           loop="true"
         >
-          {movies?.map((movie) => (
-            <swiper-slide key={movie.id}>
-              <VideoCard posterPath={movie.poster_path} title={movie.title} />
-            </swiper-slide>
-          ))}
+          {movies?.map((movie) => {
+            if (!movie.poster_path) return null;
+
+            return (
+              <swiper-slide key={movie.id}>
+                <VideoCard posterPath={movie.poster_path} title={movie.title} />
+              </swiper-slide>
+            );
+          })}
         </swiper-container>
       </div>
     </div>
