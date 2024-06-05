@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { register } from "swiper/element/bundle";
-import VideoCard from "../VideoCard/VideoCard";
+import MovieCard from "../MovieCard/MovieCard";
 
 register();
 
-const VideoList = ({ title, movies }) => {
+const MovieList = ({ title, movies }) => {
   const swiperElRef = useRef(null);
 
   return (
@@ -23,8 +23,11 @@ const VideoList = ({ title, movies }) => {
             if (!movie.poster_path) return null;
 
             return (
-              <swiper-slide key={movie.id}>
-                <VideoCard posterPath={movie.poster_path} title={movie.title} />
+              <swiper-slide key={movie?.id}>
+                <MovieCard
+                  posterPath={movie?.poster_path}
+                  title={movie?.title}
+                />
               </swiper-slide>
             );
           })}
@@ -34,4 +37,4 @@ const VideoList = ({ title, movies }) => {
   );
 };
 
-export default VideoList;
+export default MovieList;

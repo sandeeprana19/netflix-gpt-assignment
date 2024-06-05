@@ -1,7 +1,7 @@
 import React from "react";
 import { IMG_CDN_URL } from "../../../utils/constants/constants";
 
-const VideoCard = ({ posterPath, title }) => {
+const MovieCard = ({ posterPath, title }) => {
   return (
     <div className="w-full h-60 overflow-hidden rounded">
       <img
@@ -13,4 +13,4 @@ const VideoCard = ({ posterPath, title }) => {
   );
 };
 
-export default VideoCard;
+export default MovieCard;
