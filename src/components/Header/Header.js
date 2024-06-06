@@ -59,7 +59,7 @@ const Header = () => {
 
   return (
     <header className="absolute top-0 left-0 w-screen z-50 bg-gradient-to-b from-black py-3">
-      <div className="w-[75rem] 2xl:w-[100rem] mx-auto">
+      <div className="w-full xl:w-[75rem] 2xl:w-[100rem] px-8 xl:px-0 xl:mx-auto">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-center w-[9.25rem] overflow-hidden">
             <img className="w-full h-auto" src={LOGO} alt="Netflix Logo" />
