@@ -8,7 +8,7 @@ const VideoBackground = ({ movieId }) => {
   const movieTrailer = useSelector((store) => store.movies?.trailerVideo);
 
   return (
-    <div className="w-full h-full relative before:bg-black before:bg-opacity-20 before:absolute before:w-full before:h-full before:bg-gradient-to-t before:from-black overflow-hidden">
+    <div className="w-full h-full relative before:bg-black before:bg-opacity-20 before:absolute before:w-full before:h-full before:bg-gradient-to-t before:from-black overflow-hidden flex items-center justify-center lg:block">
       <iframe
         className="w-full aspect-video"
         src={`https://www.youtube.com/embed/${movieTrailer?.key}?autoplay=1&mute=1`}

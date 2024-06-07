@@ -7,9 +7,9 @@ const SecondaryContainer = () => {
 
   return (
     movies?.nowPlayingMovies && (
-      <section className="bg-black py-20">
-        <div className="w-[75rem] 2xl:w-[100rem] mx-auto">
-          <div className="flex flex-col gap-y-10 relative -mt-52 w-full">
+      <section className="bg-black pt-0 pb-14 xl:py-20 w-screen">
+        <div className="w-full xl:w-[75rem] 2xl:w-[100rem] px-8 xl:px-0 xl:mx-auto">
+          <div className="flex flex-col gap-y-10 relative xl:-mt-52 w-full">
             <MovieList title="Now Playing" movies={movies?.nowPlayingMovies} />
             <MovieList title="Popular Movies" movies={movies?.popularMovies} />
             <MovieList
