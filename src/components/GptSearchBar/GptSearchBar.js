@@ -53,7 +53,7 @@ const GptSearchBar = () => {
 
   return (
     <div>
-      <form className="w-6/12 mx-auto" onSubmit={handleGptSearch}>
+      <form className="w-full lg:w-6/12 mx-auto" onSubmit={handleGptSearch}>
         <label className="input input-bordered bg-white flex items-center gap-2">
           <input
             ref={searchText}

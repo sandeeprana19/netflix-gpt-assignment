@@ -22,11 +22,11 @@ const MovieList = ({ title, movies }) => {
       swiperEl.breakpoints = {
         320: {
           slidesPerView: 1,
-          spaceBetween: 10,
+          spaceBetween: 20,
         },
         480: {
-          slidesPerView: 2,
-          spaceBetween: 10,
+          slidesPerView: 1,
+          spaceBetween: 20,
         },
         768: {
           slidesPerView: 3,

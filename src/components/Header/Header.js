@@ -76,14 +76,14 @@ const Header = () => {
           : null
       }`}
     >
-      <div className="w-full xl:w-[75rem] 2xl:w-[100rem] px-8 xl:px-0 xl:mx-auto">
-        <div className="flex items-center justify-between">
+      <div className="w-full xl:w-[75rem] 2xl:w-[100rem] px-5 md:px-8 xl:px-0 xl:mx-auto">
+        <div className="flex items-center justify-between flex-col md:flex-row">
           <div className="flex items-center justify-center w-[9.25rem] overflow-hidden">
             <img className="w-full h-auto" src={LOGO} alt="Netflix Logo" />
           </div>
 
           {user && (
-            <div className="flex items-center justify-end gap-x-7">
+            <div className="flex items-center justify-between md:justify-end gap-x-7 w-full md:w-auto">
               {showGptSearch && (
                 <select
                   className="select select-bordered w-full max-w-xs"
