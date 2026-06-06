@@ -54,7 +54,7 @@ const Login = () => {
                   email: email,
                   displayName: displayName,
                   photoURL: photoURL,
-                })
+                }),
               );
             })
             .catch((error) => {

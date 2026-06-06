@@ -42,7 +42,7 @@ const Header = () => {
             email: email,
             displayName: displayName,
             photoURL: photoURL,
-          })
+          }),
         );
 
         navigate("/browse");
@@ -58,7 +58,7 @@ const Header = () => {
 
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [dispatch, navigate]);
 
   const handleGptSearch = () => {
     dispatch(toggleGptSearch());
