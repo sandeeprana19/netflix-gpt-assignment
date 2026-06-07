@@ -72,6 +72,7 @@ const Login = () => {
       signInWithEmailAndPassword(auth, emailValue, passwordValue)
         .then((userCredential) => {
           // Signed in
+          // eslint-disable-next-line no-unused-vars
           const user = userCredential.user;
         })
         .catch((error) => {
@@ -85,7 +86,7 @@ const Login = () => {
   return (
     <div className="w-screen h-screen relative">
       <div className="w-full h-full flex items-center justify-center overflow-hidden absolute top-0 left-0 z-0">
-        <img src={BG_URL} alt="Background image" />
+        <img src={BG_URL} alt="Background" />
       </div>
       <Header />
       <div className="w-[28.125rem] py-12 px-[4.25rem] bg-black bg-opacity-80 rounded absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">

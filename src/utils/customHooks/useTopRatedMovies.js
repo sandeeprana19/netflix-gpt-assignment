@@ -7,10 +7,11 @@ const useTopRatedMovies = () => {
   const dispatch = useDispatch();
   const topRatedMovies = useSelector((store) => store.movies?.topRatedMovies);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getTopRatedMovies = async () => {
     const data = await fetch(
       "https://api.themoviedb.org/3/movie/top_rated?page=1",
-      API_OPTIONS
+      API_OPTIONS,
     );
 
     const json = await data.json();
@@ -20,7 +21,7 @@ const useTopRatedMovies = () => {
 
   useEffect(() => {
     !topRatedMovies && getTopRatedMovies();
-  }, []);
+  }, [getTopRatedMovies, topRatedMovies]);
 };
 
 export default useTopRatedMovies;
