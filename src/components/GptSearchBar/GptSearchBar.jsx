@@ -15,7 +15,7 @@ const GptSearchBar = () => {
       "https://api.themoviedb.org/3/search/movie?query=" +
         movie +
         "&include_adult=false&language=en-US&page=1",
-      API_OPTIONS
+      API_OPTIONS,
     );
 
     const json = await data.json();
@@ -47,14 +47,14 @@ const GptSearchBar = () => {
     const tmdbResults = await Promise.all(promiseArray);
 
     dispatch(
-      addGptMovieResult({ movieNames: getMovies, movieResults: tmdbResults })
+      addGptMovieResult({ movieNames: getMovies, movieResults: tmdbResults }),
     );
   };
 
   return (
     <div>
       <form className="w-full lg:w-6/12 mx-auto" onSubmit={handleGptSearch}>
-        <label className="input input-bordered bg-white flex items-center gap-2">
+        <label className="input input-bordered bg-white flex items-center gap-2 w-full">
           <input
             ref={searchText}
             type="text"

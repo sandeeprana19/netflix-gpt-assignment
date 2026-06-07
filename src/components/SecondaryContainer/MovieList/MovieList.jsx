@@ -7,7 +7,7 @@ register();
 const MovieList = ({ title, movies }) => {
   const swiperElRef = useRef(null);
 
-  console.log(swiperElRef);
+  // console.log(swiperElRef);
 
   useEffect(() => {
     if (swiperElRef.current) {

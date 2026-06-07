@@ -8,7 +8,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization: "Bearer " + import.meta.env.VITE_TMDB_API_KEY,
+    Authorization: "Bearer " + import.meta.env.VITE_TMDB_KEY,
   },
 };
 
@@ -32,4 +32,4 @@ export const SUPPORTED_LANGUAGES = [
   },
 ];
 
-export const VITE_OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+export const VITE_OPENAI_KEY = import.meta.env.VITE_OPENAI_KEY;
